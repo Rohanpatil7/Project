@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict - Harvesting Brilliance</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            padding: 20px;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        h2 {
+            color: #d35400;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            box-sizing: border-box; /* Ensures padding doesn't widen element */
+        }
+        button {
+            width: 100%;
+            background-color: #27ae60;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #219150;
+        }
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            color: #7f8c8d;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Seed Parameters</h2>
+        <form action="/result" method="POST">
+            <div class="form-group">
+                <label>Area</label>
+                <input type="number" step="any" name="Area" required placeholder="e.g. 56276">
+            </div>
+            <div class="form-group">
+                <label>Perimeter</label>
+                <input type="number" step="any" name="Perimeter" required placeholder="e.g. 888.24">
+            </div>
+            <div class="form-group">
+                <label>Major Axis Length</label>
+                <input type="number" step="any" name="Major_Axis_Length" required>
+            </div>
+            <div class="form-group">
+                <label>Minor Axis Length</label>
+                <input type="number" step="any" name="Minor_Axis_Length" required>
+            </div>
+            <div class="form-group">
+                <label>Convex Area</label>
+                <input type="number" step="any" name="Convex_Area" required>
+            </div>
+            <div class="form-group">
+                <label>Equiv Diameter</label>
+                <input type="number" step="any" name="Equiv_Diameter" required>
+            </div>
+            <div class="form-group">
+                <label>Eccentricity</label>
+                <input type="number" step="any" name="Eccentricity" required>
+            </div>
+            <div class="form-group">
+                <label>Solidity</label>
+                <input type="number" step="any" name="Solidity" required>
+            </div>
+            <div class="form-group">
+                <label>Extent</label>
+                <input type="number" step="any" name="Extent" required>
+            </div>
+            <div class="form-group">
+                <label>Roundness</label>
+                <input type="number" step="any" name="Roundness" required>
+            </div>
+            <div class="form-group">
+                <label>Aspect Ration</label>
+                <input type="number" step="any" name="Aspect_Ration" required>
+            </div>
+            <div class="form-group">
+                <label>Compactness</label>
+                <input type="number" step="any" name="Compactness" required placeholder="e.g. 0.7">
+            </div>
+
+            <button type="submit">Predict Species</button>
+        </form>
+        <a href="/" class="back-link">← Back to Home</a>
+    </div>
+
+</body>
+</html>
